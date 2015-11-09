@@ -103,7 +103,7 @@ def oauth_authorized():
         "client_secret":CONSUMER_SECRET,
         "code":AUTHORIZATION_CODE
         }
-    url = "https://api.venmo.com/oauth/access_token"
+    url = "https://api.venmo.com/v1/oauth/access_token"
     response = requests.post(url, data)
     response_dict = response.json()
     access_token = response_dict.get('access_token')
